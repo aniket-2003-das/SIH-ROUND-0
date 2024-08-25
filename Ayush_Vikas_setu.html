@@ -4,18 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AYUSH VIKAS SETU</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <div class="image-grid">
-        <img src="SRC/01_Registration.png" alt="Image 1">
-        <img src="SRC/02_Login.png" alt="Image 2">
-        <img src="SRC/03_Registration-Type.png" alt="Image 3">
-        <img src="SRC/Schemes.png" alt="Image 7">
-        <img src="SRC/Funding.png" alt="Image 5">
-        <img src="SRC/Features.png" alt="Image 4">
-        <img src="SRC/toolkit.png" alt="Image 8">
-        <img src="SRC/Key_Iniciatives.png" alt="Image 6">
-    </div>
+    <img id="main-image" src="SRC/01_Registration.png" alt="Image 1" onclick="showNextImage()">
+
+    <script>
+        const images = [
+            "SRC/01_Registration.png",
+            "SRC/02_Login.png",
+            "SRC/03_Registration-Type.png",
+            "SRC/1-About.png",
+            "SRC/contact.png",
+            "SRC/Schemes.png",
+            "SRC/Features.png",
+            "SRC/Funding.png",
+            "SRC/Key_Iniciatives.png",
+            "SRC/toolkit.png"      
+        ];
+
+        let currentImageIndex = 0;
+
+        function showNextImage() {
+            // Delay image change by 1 second (1000 milliseconds)
+            setTimeout(() => {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                document.getElementById('main-image').src = images[currentImageIndex];
+            }, 750); // Change 1000 to 2000 for a 2-second delay
+        }
+    </script>
 </body>
 </html>
+
