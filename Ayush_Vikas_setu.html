@@ -29,7 +29,7 @@
 
     <script>
         const images = [
-            "SRC/01_Registration.png",
+            "./SRC/01_Registration.png",
             "SRC/02_Login.png",
             "SRC/03_Registration-Type.png",
             "SRC/1-About.png",
@@ -48,7 +48,7 @@
             setTimeout(() => {
                 currentImageIndex = (currentImageIndex + 1) % images.length;
                 document.getElementById('main-image').src = images[currentImageIndex];
-            }, 750); // Change 1000 to 2000 for a 2-second delay
+            }, 500); // Change 1000 to 2000 for a 2-second delay
         }
     </script>
 </body>
